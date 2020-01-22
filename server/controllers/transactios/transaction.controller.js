@@ -14,6 +14,6 @@ export default {
     } catch (error) {
       return res.status(422).json({ success: false, msg: error });
     }
-    return res.json({ transactions: data });
+    return res.json({ success: true, transactions: data });
   },
 };

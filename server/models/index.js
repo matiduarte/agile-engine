@@ -12,10 +12,19 @@ export function find(transactionId) {
   return transactionId ? transactions.filter(t => t.id === transactionId) : transactions;
 }
 
+/**
+ * Incremental id
+ * @returns {number}
+ */
 function findLastId() {
   return Math.max(...transactions.map(({ id }) => parseInt(id, 10)));
 }
 
+/**
+ * Creates a debit transaction and update the account balance
+ * @param amount
+ * @returns {{amount: *, id: number, type: string, effectiveDate: Date}}
+ */
 function debitTransaction(amount) {
   if (!lockTransaction) {
     lockTransaction = true;
@@ -33,6 +42,11 @@ function debitTransaction(amount) {
   throw 'TRANSACTIONS ARE LOCKED';
 }
 
+/**
+ * Creates a credit transaction and updates account balance
+ * @param amount
+ * @returns {{amount: *, id: number, type: string, effectiveDate: Date}}
+ */
 function creditTransaction(amount) {
   if (!lockTransaction) {
     lockTransaction = true;
@@ -54,6 +68,12 @@ function creditTransaction(amount) {
   throw 'TRANSACTIONS ARE LOCKED';
 }
 
+/**
+ * Define with transaction must be created
+ * @param type
+ * @param amount
+ * @returns {{amount: *, id: number, type: string, effectiveDate: Date}}
+ */
 export function createTransaction({ type, amount }) {
   switch (type) {
     case CREDIT:
