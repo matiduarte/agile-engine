@@ -1,0 +1,41 @@
+{"data":[{
+  "id": "1",
+  "type": "credit",
+  "amount": 350,
+  "effectiveDate": "2020-01-03T15:41:01.831Z"
+},{
+  "id": "2",
+  "type": "debit",
+  "amount": 3000,
+  "effectiveDate": "2020-01-05T15:41:01.831Z"
+},{
+  "id": "3",
+  "type": "debit",
+  "amount": 1200,
+  "effectiveDate": "2020-01-10T15:41:01.831Z"
+},{
+  "id": "4",
+  "type": "credit",
+  "amount": 1500,
+  "effectiveDate": "2020-01-12T15:41:01.831Z"
+},{
+  "id": "5",
+  "type": "credit",
+  "amount": 800,
+  "effectiveDate": "2020-01-17T15:41:01.831Z"
+},{
+  "id": "6",
+  "type": "debit",
+  "amount": 300,
+  "effectiveDate": "2020-01-22T15:41:01.831Z"
+},{
+  "id": "7",
+  "type": "credit",
+  "amount": 650,
+  "effectiveDate": "2020-01-29T15:41:01.831Z"
+},{
+  "id": "8",
+  "type": "credit",
+  "amount": 4000,
+  "effectiveDate": "2020-01-30T15:41:01.831Z"
+}]}
