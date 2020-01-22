@@ -5,17 +5,20 @@
 ## Build Setup
 
 ``` bash
-# install dependencies
-$ npm run install
+# install dependencies at root directory
+$ npm i
 
-# serve with hot reload for client at localhost:3000 and API localhost:8080
+# go to client directory, cd client/, and install dependencies
+$ npm i
+
+# go back to root directory and run
 $ npm run dev
 
 ```
 
 ## API
 
-#### endpoints 
+#### Endpoints 
 
 ``` bash
  - Transactions: http://localhost:8080/api/v1/transactions

@@ -47,6 +47,7 @@ export default {
     font-weight: 300;
     font-size: 30px;
     color: #35495e;
+    margin: 15px auto;
     justify-content: flex-start;
     letter-spacing: 1px;
   }

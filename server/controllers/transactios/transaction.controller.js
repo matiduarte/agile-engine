@@ -10,7 +10,7 @@ export default {
     const { type, amount } = req.body;
     let data;
     try {
-      data = createTransaction({ type, amount: parseInt(amount, 10) });
+      data = createTransaction({ type: type.toLowerCase(), amount: parseInt(amount, 10) });
     } catch (error) {
       return res.status(422).json({ success: false, msg: error });
     }

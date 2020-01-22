@@ -56,6 +56,6 @@ export default {
 
 <style scoped>
   .card-custom {
-    margin-top: 10px;
+    margin-bottom: 20px;
   }
 </style>
