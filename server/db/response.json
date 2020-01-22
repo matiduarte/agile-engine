@@ -1,4 +1,6 @@
-{"data":[{
+{
+  "accountBalance": 10000,
+  "data":[{
   "id": "1",
   "type": "credit",
   "amount": 350,
