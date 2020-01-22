@@ -6,12 +6,6 @@
         <h1 class="navbar-item">
           AgileEngine
         </h1>
-        <a role="button" ref="navbar-burguer" class="navbar-burger burger" :class="{'is-active': toggleMenu}"
-           @click="toggleMenu = !toggleMenu" aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
       </div>
     </nav>
   </div>

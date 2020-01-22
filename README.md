@@ -1,6 +1,6 @@
-# client
+# Agile Engine
 
-> My incredible Nuxt.js project
+> Agile Engine
 
 ## Build Setup
 
@@ -8,15 +8,17 @@
 # install dependencies
 $ npm run install
 
-# serve with hot reload at localhost:3000
+# serve with hot reload for client at localhost:3000 and API localhost:8080
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## API
+
+#### endpoints 
+
+``` bash
+ - Transactions: http://localhost:8080/api/v1/transactions
+ - Transaction by id: http://localhost:8080/api/v1/transactions?transactionId=2
+ - Balance: http://localhost:8080/api/v1/account
+```

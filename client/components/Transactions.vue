@@ -4,7 +4,7 @@
     <div class="container">
       <div v-for="(transaction, index) in data" :key="index"
            class="card is-fullwidth card-custom" style="cursor: pointer; justify-content: space-between"
-           @click="toggleAcordion()">
+           @click="toggleAccordion(index)">
         <header class="card-header">
           <p
             class="card-header-title" style="text-transform: capitalize"
@@ -16,11 +16,11 @@
             {{ `$${transaction.amount}` }}
           </p>
         </header>
-        <div class="card-content" :class="{'is-hidden': !toggle}">
+        <div class="card-content is-hidden" :ref="`accordion${index}`">
           <div class="content" style="text-align: left">
-            <div>{{ `id: ${transaction.id}` }}</div>
+            <div>{{ `Id: ${transaction.id}` }}</div>
             <div>{{ `Type: ${transaction.type}` }}</div>
-            <div>{{ `Amount: ${transaction.amount}` }}</div>
+            <div>{{ `Amount: $${transaction.amount}` }}</div>
             <div>{{ `Effective Date: ${transaction.effectiveDate}` }}</div>
           </div>
         </div>
@@ -42,8 +42,13 @@ export default {
     }
   },
   methods: {
-    toggleAcordion() {
-      this.toggle = !this.toggle;
+    toggleAccordion(index) {
+      const [el] = this.$refs[`accordion${index}`];
+      if (el.classList.contains('is-hidden')) {
+        el.classList.remove('is-hidden');
+      } else {
+        el.classList.add('is-hidden');
+      }
     }
   }
 }
@@ -51,6 +56,6 @@ export default {
 
 <style scoped>
   .card-custom {
-    margin-top: 15px;
+    margin-top: 10px;
   }
 </style>
