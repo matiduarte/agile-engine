@@ -6,6 +6,9 @@ let { accountBalance } = db;
 let lockTransaction = false;
 
 export function find(transactionId) {
+  if (lockTransaction) {
+    throw 'TRANSACTIONS ARE LOCKED';
+  }
   return transactionId ? transactions.filter(t => t.id === transactionId) : transactions;
 }
 
@@ -44,6 +47,7 @@ function creditTransaction(amount) {
       lockTransaction = false;
       throw 'BALANCE MUST BE A NON NEGATIVE VALUE';
     }
+    accountBalance -= amount;
     lockTransaction = false;
     return transaction;
   }
