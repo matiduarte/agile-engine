@@ -14,6 +14,8 @@ $ npm i
 # go back to root directory and run
 $ npm run dev
 
+# run tests
+$ npm run test
 ```
 
 ## API
