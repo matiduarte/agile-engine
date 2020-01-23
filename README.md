@@ -1,6 +1,6 @@
 # Agile Engine
 
-> Agile Engine
+> Agile Engine Challenge
 
 ## Build Setup
 
